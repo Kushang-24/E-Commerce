@@ -1,0 +1,40 @@
+.product {
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+}
+
+button {
+  cursor: pointer;
+}
+
+#product-list {
+  display: flex;
+}
+.navbar-nav {
+  padding-left: 25%;
+}
+
+.bi-search {
+  margin-top: 7px;
+  margin-left: -28px !important;
+  z-index: 1;
+}
+.container-custom {
+  max-width: 1720px;
+  margin: auto;
+}
+
+.carousel-control-prev-icon {
+  margin-left: -110px;
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 100% 100%;
+}
+
+.carousel-control-next-icon {
+  margin-left: 110px;
+}
