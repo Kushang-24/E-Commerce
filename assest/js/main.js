@@ -1,62 +1,64 @@
 const products = [
     {
+        id: 0,
+        name: 'iphone 15 pro max',
+        price: 1000,
+        image: 'assest/images/product-1.png'
+    },
+    {
         id: 1,
-        name: 'Product 1',
-        price: 20.99,
-        image: 'assest/images/product-1.jpg'
+        name: 'smasung s24 ultra',
+        price: 500,
+        image: 'assest/images/product-2.webp'
     },
     {
         id: 2,
-        name: 'Product 2',
-        price: 30.49,
-        image: 'assest/images/product-2.jpg'
-    },
-    {
-        id: 3,
-        name: 'Product 3',
-        price: 50.89,
-        image: 'assest/images/product-3.jpg'
+        name: 'redmi note pro+ 5g',
+        price: 1000,
+        image: 'assest/images/product-3.webp'
     }, {
-        id: 4,
-        name: 'Product 4',
-        price: 70.59,
-        image: 'assest/images/product-4.jpg'
+        id: 3,
+        name: 'oppo a79 5G',
+        price: 1000,
+        image: 'assest/images/product-4.webp'
     },
 ];
 
-const productListContainer = document.getElementById('product-list');
+
+const productList = document.getElementById('product-list');
 products.forEach(product => {
-    const productDiv = document.createElement('div');
-    productDiv.className = 'product';
-    productDiv.innerHTML = `
-            <div class="row px-1">
-                <img src="${product.image}" alt="${product.name}">
-                <h3 class="text-uppercase fw-bold fs-4 mt-4">${product.name}</h3>
-                <p class="text-uppercase fw-bold fs-5 text-danger mt-4">Price: $${product.price.toFixed(2)}</p>
-                <button class="btn bg-dark text-white" onclick="addToCart(${product.id})">Add to Cart</button>
-            </div>
+    const productCard = document.createElement('div');
+    productCard.className = 'card product-card col-md-4';
+    productCard.innerHTML = `
+<img src="${product.image}" height="310px" class="card-img-top" alt="${product.name}">
+<div class="card-body">
+  <h5 class="card-title">${product.name}</h5>
+  <p class="card-text">$${product.price}</p>
+  <button id="add-to-cart-button" onclick="addToCart('${product.id}')" class="btn btn-primary">Add to Cart</button>
+</div>
 `;
-    productListContainer.appendChild(productDiv);
+    productList.appendChild(productCard);
 });
 
-function addToCart(productId) {
-    const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
-    const selectedProduct = products.find(product => product.id === productId);
+let cart = JSON.parse(localStorage.getItem('cart'));
+function addToCart(id) {
 
-    const cartItem = {
-        id: selectedProduct.id,
-        name: selectedProduct.name,
-        price: selectedProduct.price,
-        quantity: 1
-    };
-
-    const existingItemIndex = cartItems.findIndex(item => item.id === cartItem.id);
-
-    if (existingItemIndex !== -1) {
-        cartItems[existingItemIndex].quantity += 1;
-    } else {
-        cartItems.push(cartItem);
+    if (cart == null) {
+        cart = [];
     }
-
-    localStorage.setItem('cart', JSON.stringify(cartItems));
+    const newObj = {
+        id: products[id].id,
+        name: products[id].name,
+        image: products[id].image,
+        price: products[id].price,
+        quantity: 1,
+    }
+    const existingItem = cart.findIndex(item => item.id === newObj.id);
+    if (existingItem != -1) {
+        cart[existingItem].quantity += 1;
+    } else {
+        cart.push(newObj);
+    }
+    localStorage.setItem('cart', JSON.stringify(cart));
+    viewData();
 }

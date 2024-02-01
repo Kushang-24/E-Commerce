@@ -11,6 +11,7 @@ button {
 #product-list {
   display: flex;
 }
+
 .navbar-nav {
   padding-left: 25%;
 }
@@ -20,8 +21,9 @@ button {
   margin-left: -28px !important;
   z-index: 1;
 }
+
 .container-custom {
-  max-width: 1720px;
+  max-width: 1820px;
   margin: auto;
 }
 
@@ -37,4 +39,71 @@ button {
 
 .carousel-control-next-icon {
   margin-left: 110px;
+}
+
+.pi.pi-visa {
+  background: url(../images/visa.svg) 50% no-repeat;
+}
+
+.pi.pi-american-express {
+  background: url(../images/american-express.svg) 50% no-repeat;
+}
+
+.pi.pi-mastercard {
+  background: url(../images/mastercard.svg) 50% no-repeat;
+}
+
+.pi.pi-paypal {
+  background: url(../images/paypal.svg) 50% no-repeat;
+}
+
+.pi {
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  width: 40px;
+  min-height: 30px;
+  background-origin: padding-box;
+}
+.h-images{
+  height: 100px;
+}
+body {
+  padding: 20px;
+}
+
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product-card {
+  width: 310px;
+  margin: 10px;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+.img-height{
+  width:100px;
+  height: 120px;
+}
+.cart-table {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.cart-table th,
+.cart-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+#cart-count{
+  position: absolute;
+  background-color: rgba(221, 136, 136, 0.4);
+  bottom: 47px;
+  padding: 2px 6px;
+  border-radius: 50%;
 }

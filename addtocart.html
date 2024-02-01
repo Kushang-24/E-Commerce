@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assest/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assest/css/style.css">
+    <link rel="stylesheet" href="assest/css/media.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <title>E-Commerce</title>
+</head>
+
+<body>
+    <header id="header"></header>
+    <div class="container">
+        <h2 class="cart-details">Shopping Cart</h2>
+        <table id="cart-table" class="table cart-details">
+            <thead>
+                <tr>
+                    <td class="fw-bold">Name</td>
+                    <td class="fw-bold">Image</td>
+                    <th>Details</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="cart-items"></tbody>
+        </table>
+        <p id="sub-total" class="cart-details">Sub Total: $0</p>
+
+        <button onclick="clearCart()" class="btn btn-danger">Clear Cart</button>
+    </div>
+</body>
+
+</html>
+<script src="assest/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assest/js/header.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+<script>
+    var cart = JSON.parse(localStorage.getItem('cart'));
+    function updateData() {
+        if (cart) {
+            var tabData = "";
+            for (var i = 0; i < cart.length; i++) {
+                tabData += `
+                    <tr>
+                        <td>${cart[i].name}</td>
+                        <td><img src="${cart[i].image}" class= "img-height card-img-top" alt="${cart[i].name}"></td>
+                        <td>$${cart[i].price}</td>
+                        <td>${cart[i].quantity}</td>
+                        <td>$${cart[i].price * cart[i].quantity}</td>
+                        <td>
+                            <button onclick="updateQuantityDe('${cart[i].name}')" class="btn btn-sm btn-secondary">-</button>
+                            <button onclick="updateQuantityIn('${cart[i].name}')" class="btn btn-sm btn-secondary">+</button>
+                            <button onclick="DeleteQuantity('${cart[i].name}')" class="btn btn-sm btn-danger">Delete</button>
+                        </td>
+                    </tr>`;
+            }
+            document.getElementById('cart-items').innerHTML = tabData;
+        }
+        const subTotal = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
+        document.getElementById('sub-total').innerText = `Sub Total: $${subTotal.toFixed(2)}`;
+
+    }
+
+    function updateQuantityIn(name) {
+        let incQty = cart.find((item) => {
+            return item.name === name;
+        })
+
+        incQty.quantity += 1;
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateData();
+    }
+
+    function updateQuantityDe(name) {
+        let incQty = cart.find((item) => {
+            return item.name === name;
+        })
+        if (incQty.quantity == 1) {
+            alert('Invalid')
+        } else {
+            incQty.quantity -= 1;
+            localStorage.setItem('cart', JSON.stringify(cart));
+            updateData();
+        }
+    }
+
+    function DeleteQuantity(name) {
+        cart = cart.filter(item => item.name !== name);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateData();
+        viewData();
+    }
+
+    function clearCart(name) {
+        cart = [];
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateData();
+        viewData();
+    }
+
+    updateData();
+</script>
