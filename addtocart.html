@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="assest/images/logo.png" rel="shortcut icon" type="image/x-icon" />
+    <link rel="stylesheet" href="assest/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assest/css/style.css">
+    <link rel="stylesheet" href="assest/css/media.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <title>E-Commerce</title>
+</head>
+
+<body>
+    <header id="header"></header>
+    <section class="mt-5 container top-margins">
+        <h1 class="mb-6 display-5 fw-bold text-center text-uppercase mb-5">Your Cart</h1>
+        <div class="row g-4 g-md-8">
+            <div class="col-12 col-lg-6 col-xl-7">
+                <div class="">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <td class="fw-bold">Image</td>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                                <th>Total</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <tbody id="cart-items"></tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6 col-xl-5">
+                <div class="bg-dark p-4 p-md-5 text-white">
+                    <h3 class="fs-3 fw-bold m-0 text-center">Order Summary</h3>
+                    <div class="py-3 border-bottom border-white">
+                        <div class="d-flex justify-content-between align-items-center mb-2 flex-column flex-sm-row">
+                            <p class="m-0 fw-bolder fs-6">Subtotal</p>
+                            <p id="sub-total-1" class="cart-details fw-bold">$0</p>
+                        </div>
+                        <div
+                            class="d-flex justify-content-between align-items-center flex-column flex-sm-row mt-3 m-sm-0">
+                            <p class="m-0 fw-bolder fs-6">Shipping</p>
+                            <span class="text-white opacity-75 small">Will be set at checkout</span>
+                        </div>
+                    </div>
+                    <div class="py-3 border-bottom border-white">
+                        <div class="d-flex justify-content-between align-items-center flex-column flex-sm-row">
+                            <div>
+                                <p class="m-0 fs-5 fw-bold">Grand Total</p>
+                                <span class="text-white opacity-75 small">$45.89 sales tax</span>
+                            </div>
+                            <p id="Grand-total" class="cart-details fw-bold">$0</p>
+                        </div>
+                    </div>
+                    <button class="btn btn-link p-0 mt-2 text-white fw-bolder text-decoration-none" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false"
+                        aria-controls="collapseExample">
+                        Have a coupon code?
+                    </button>
+                    <div class="collapse" id="collapseExample">
+                        <div class="card card-body bg-transparent p-0">
+                            <div class="input-group mb-0 mt-2">
+                                <input type="text" class="form-control border-0" placeholder="Enter coupon code">
+                                <button
+                                    class="btn btn-white text-dark px-3 btn-sm border-0 d-flex justify-content-center align-items-center"><i
+                                        class="ri-checkbox-circle-line ri-lg"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="checkout.html" class="btn bg-white w-100 text-dark text-center mt-3 p-3" role="button">
+                        <i class="bi bi-fingerprint align-bottom"></i> Proceed to checkout</a>
+                    <a href="checkout.html" class="btn bg-success-subtle text-dark w-100 text-center mt-3 p-3" role="button">
+                        <i class="bi bi-paypal align-bottom"></i> Checkout with PayPal</a>
+                </div>
+                <ul class="list-unstyled d-flex justify-content-center mt-3">
+                    <li class="mx-1 border d-flex align-items-center p-2"><i class="pi pi-paypal"></i></li>
+                    <li class="mx-1 border d-flex align-items-center p-2"><i class="pi pi-mastercard"></i></li>
+                    <li class="mx-1 border d-flex align-items-center p-2"><i class="pi pi-american-express"></i></li>
+                    <li class="mx-1 border d-flex align-items-center p-2"><i class="pi pi-visa"></i></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <footer id="footer"></footer>
+</body>
+
+</html>
+<script src="assest/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assest/js/header.js"></script>
+<script src="assest/js/footer.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+</html>
+<script>
+    
+    var cart = JSON.parse(localStorage.getItem('cart'));
+
+    function updateData() {
+        if (cart) {
+            var tabData = "";
+            for (var i = 0; i < cart.length; i++) {
+                tabData += `
+                    <tr>
+                        <td>${cart[i].name}</td>
+                        <td><img src="${cart[i].image}" class= "img-height card-img-top" alt="${cart[i].name}"></td>
+                        <td>${cart[i].price}</td>
+                        <td>${cart[i].quantity}</td>
+                        <td>${cart[i].price * cart[i].quantity}</td>
+                        <td>
+                            <button onclick="updateQuantityDe('${cart[i].name}')" class="btn btn-sm btn-secondary">-</button>
+                            <button onclick="updateQuantityIn('${cart[i].name}')" class="btn btn-sm btn-secondary">+</button>
+                            <button onclick="DeleteQuantity('${cart[i].name}')" class="btn btn-sm btn-danger">Delete</button>
+                        </td>
+                    </tr>
+`;
+            }
+            document.getElementById('cart-items').innerHTML = tabData;
+        }
+        const subTotal = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
+        document.getElementById('sub-total').innerText = `${subTotal.toFixed(2)}`;
+        document.getElementById('sub-total-1').innerText = `${subTotal.toFixed(2)}`;
+        console.log(subTotal)
+
+        const GrandTotal = cart.reduce((total, item) => total + 45.89 +  (item.price * item.quantity), 0);
+        document.getElementById('Grand-total').innerText = `${GrandTotal.toFixed(2)}`;
+
+    }
+
+    var cart = JSON.parse(localStorage.getItem('cart'));
+
+    function updateDataItems() {
+        if (cart) {
+            var tabDataItems = "";
+            for (var i = 0; i < cart.length; i++) {
+                tabDataItems += `
+                <div>
+                    <div class="row mx-0 pb-4 mb-4 border-bottom">
+                        <div class="col-5">
+                            <picture class="d-block bg-light">
+                            <img src="${cart[i].image}" class= "img-height card-img-top" alt="${cart[i].name}">
+                            </picture>
+                        </div>
+                        <div class="col-7">
+                            <div class="ms-5">
+                                <h6 class="justify-content-between d-flex align-items-start mb-2">
+                                    ${cart[i].name}
+                                    <i class="bi bi-x-lg" onclick="DeleteQuantity('${cart[i].name}')"></i>
+                                </h6>
+                                <small class="d-block text-muted fw-bolder">Quantity:${cart[i].quantity}</small>
+                            </div>
+                            <p class="fw-bolder text-end m-0">${cart[i].price}</p>
+                        </div>
+                    </div>
+                </div>`;
+            }
+            document.getElementById('cart-items-1').innerHTML = tabDataItems;
+        }
+
+    }
+
+    function updateQuantityIn(name) {
+        let incQty = cart.find((item) => {
+            return item.name === name;
+        })
+
+        incQty.quantity += 1;
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateData();
+        updateDataItems();
+    }
+
+    function updateQuantityDe(name) {
+        let incQty = cart.find((item) => {
+            return item.name === name;
+        })
+
+        if (incQty.quantity == 1) {
+            alert('Invalid')
+        } else {
+            incQty.quantity -= 1;
+            localStorage.setItem('cart', JSON.stringify(cart));
+            updateData();
+            updateDataItems();
+        }
+    }
+
+    function DeleteQuantity(name) {
+        cart = cart.filter(item => item.name !== name);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateData();
+        updateDataItems();
+        viewData();
+    }
+
+    function clearCart(name) {
+        cart = [];
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateData();
+        updateDataItems();
+        viewData();
+    }
+
+    updateData();
+    updateDataItems();
+
+</script>

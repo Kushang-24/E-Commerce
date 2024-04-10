@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="assest/images/logo.png" rel="shortcut icon" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assest/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assest/css/style.css">
+    <link rel="stylesheet" href="assest/css/media.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link
+        href="https://assets.website-files.com/63711f8638b99b3cd326f3a4/css/sleek-site-preloader.webflow.032dda56c.css"
+        rel="stylesheet" type="text/css" />
+    <title>E-Commerce</title>
+</head>
+
+<body>
+    <header id="header"></header>
+    <div class="container">
+        <div class="row">
+            <ul class="nav nav-underline mt-custom" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active text-dark fw-bold" id="pills-home-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
+                        aria-selected="true">Your Cart</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link text-dark fw-bold" id="pills-profile-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile"
+                        aria-selected="false">Information</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link text-dark fw-bold" id="pills-contact-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact"
+                        aria-selected="false">Shipping</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link text-dark fw-bold" id="pills-disabled-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-disabled" type="button" role="tab" aria-controls="pills-disabled"
+                        aria-selected="false">Payment</button>
+                </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"
+                    tabindex="0">
+                    <div class="row">
+                        <div class="col-lg-7 col-sm-12">
+                            <div id="cart-items-2"></div>
+                        </div>
+                        <div class="col-lg-5 col-sm-12">
+                            <div class="bg-light pt-lg-5 pe-lg-4 aside-checkout pb-5 pb-lg-0 my-5 my-lg-0">
+                                <div class="p-4 py-lg-0 pe-lg-0 ps-lg-5">
+                                    <div class="pb-4 border-bottom">
+                                        <div class="py-3 border-bottom border-white">
+                                            <div
+                                                class="d-flex justify-content-between align-items-center mb-2 flex-column flex-sm-row">
+                                                <p class="m-0 fw-bolder fs-6">Subtotal</p>
+                                                <p id="sub-total-1" class="cart-details fw-bold">$0</p>
+                                            </div>
+                                            <div
+                                                class="d-flex justify-content-between align-items-center flex-column flex-sm-row mt-3 m-sm-0">
+                                                <p class="m-0 fw-bolder fs-6">Shipping</p>
+                                                <span class="small">Will be set at checkout</span>
+                                            </div>
+                                        </div>
+                                        <div class="py-3 border-bottom border-white">
+                                            <div
+                                                class="d-flex justify-content-between align-items-center flex-column flex-sm-row">
+                                                <div>
+                                                    <p class="m-0 fs-5 fw-bold">Grand Total</p>
+                                                    <span class="small">$45.89 sales tax</span>
+                                                </div>
+                                                <p id="Grand-total" class="cart-details fw-bold">$0</p>
+                                            </div>
+                                        </div>
+                                        <div class="py-4">
+                                            <div class="input-group mb-0">
+                                                <input type="text" class="form-control fw-bold"
+                                                    placeholder="Enter coupon code">
+                                                <button class="btn btn-secondary btn-sm px-4 fw-bold z-1">Apply</button>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="btn btn-dark w-100 text-center fw-bold text-uppercase py-3"
+                                            role="button">Proceed
+                                            to checkout</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"
+                    tabindex="0">
+                    <div class="row">
+                        <div class="col-lg-7 col-sm-12">
+                            <div class="mt-5">
+                                <div class="d-flex justify-content-between align-items-center mb-4 border-bottom pb-4">
+                                    <h3 class="fs-5 fw-bolder m-0 lh-1">Contact Information</h3>
+                                    <small class="text-muted fw-bolder">Already registered? <a href="account.html"
+                                            class="text-dark">Login</a></small>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="firstNameBilling" class="form-label">First name</label>
+                                            <input type="text" class="form-control" id="firstNameBilling" placeholder=""
+                                                value="" required="" fdprocessedid="ktdxg">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="lastNameBilling" class="form-label">Last name</label>
+                                            <input type="text" class="form-control" id="lastNameBilling" placeholder=""
+                                                value="" required="" fdprocessedid="df6xbm">
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <label for="email" class="form-label">Email</label>
+                                            <input type="email" class="form-control" id="email"
+                                                placeholder="you@example.com" fdprocessedid="6241ux">
+                                        </div>
+                                        <div class="form-group form-check m-0">
+                                            <input type="checkbox" class="form-check-input" id="add-mailinglist"
+                                                checked="">
+                                            <label class="form-check-label small text-muted" for="add-mailinglist">Keep
+                                                me
+                                                updated with your latest news and offers</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h3 class="fs-5 mt-5 fw-bolder mb-4 border-bottom pb-4">Shipping Address</h3>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="firstName" class="form-label">First name</label>
+                                            <input type="text" class="form-control" id="firstName" placeholder=""
+                                                value="" required="" fdprocessedid="bdqb4k">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="lastName" class="form-label">Last name</label>
+                                            <input type="text" class="form-control" id="lastName" placeholder=""
+                                                value="" required="" fdprocessedid="ohyio">
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <label for="address" class="form-label">Address</label>
+                                            <input type="text" class="form-control" id="address"
+                                                placeholder="123 Some Street Somewhere" required=""
+                                                fdprocessedid="z7zw6q">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="country" class="form-label">Country</label>
+                                            <select class="form-select" id="country" required="" fdprocessedid="2botek">
+                                                <option value="">Please Select...</option>
+                                                <option>United States</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="state" class="form-label">State</label>
+                                            <select class="form-select" id="state" required="" fdprocessedid="lm5tjq">
+                                                <option value="">Please Select...</option>
+                                                <option>California</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="zip" class="form-label">Zip/Post Code</label>
+                                            <input type="text" class="form-control" id="zip" placeholder="" required=""
+                                                fdprocessedid="do86jn">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 col-sm-12">
+                            <div id="cart-items-3"></div>
+                            <div class="bg-light pt-lg-5 pe-lg-4 aside-checkout pb-5 pb-lg-0 my-5 my-lg-0">
+                                <div class="p-4 py-lg-0 pe-lg-0 ps-lg-5">
+                                    <div class="pb-4 border-bottom">
+                                        <div class="py-3 border-bottom border-white">
+                                            <div
+                                                class="d-flex justify-content-between align-items-center mb-2 flex-column flex-sm-row">
+                                                <p class="m-0 fw-bolder fs-6">Subtotal</p>
+                                                <p id="sub-total-2" class="cart-details fw-bold">$0</p>
+                                            </div>
+                                            <div
+                                                class="d-flex justify-content-between align-items-center flex-column flex-sm-row mt-3 m-sm-0">
+                                                <p class="m-0 fw-bolder fs-6">Shipping</p>
+                                                <span class="small">Will be set at checkout</span>
+                                            </div>
+                                        </div>
+                                        <div class="py-3 border-bottom border-white">
+                                            <div
+                                                class="d-flex justify-content-between align-items-center flex-column flex-sm-row">
+                                                <div>
+                                                    <p class="m-0 fs-5 fw-bold">Grand Total</p>
+                                                    <span class="small">$45.89 sales tax</span>
+                                                </div>
+                                                <p id="Grand-total-1" class="cart-details fw-bold">$0</p>
+                                            </div>
+                                        </div>
+                                        <div class="py-4">
+                                            <div class="input-group mb-0">
+                                                <input type="text" class="form-control fw-bold"
+                                                    placeholder="Enter coupon code">
+                                                <button class="btn btn-secondary btn-sm px-4 fw-bold z-1">Apply</button>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="btn btn-dark w-100 text-center fw-bold text-uppercase py-3"
+                                            role="button">Proceed
+                                            to checkout</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab"
+                    tabindex="0">
+                    <div class="row">
+                        <div class="col-lg-7 col-sm-12">
+                            <div class="mt-5">
+                                <ul class="list-group mb-5 d-none d-lg-block rounded-0">
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        <div class="d-flex justify-content-start align-items-center">
+                                            <span class="text-muted small me-2 f-w-36 fw-bolder">Contact</span>
+                                            <span class="small">test@email.com</span>
+                                        </div>
+                                        <a href="checkout.html" class="text-muted small" role="button">Change</a>
+                                    </li>
+                                </ul>
+                                <h3 class="fs-5 fw-bolder mb-4 border-bottom pb-4">Shipping Method</h3>
+                                <div
+                                    class="form-check form-group form-check-custom form-radio-custom form-radio-highlight mb-3">
+                                    <input class="form-check-input" type="radio" name="checkoutShippingMethod"
+                                        id="checkoutShippingMethodOne" checked="">
+                                    <label class="form-check-label" for="checkoutShippingMethodOne">
+                                        <span class="d-flex justify-content-between align-items-start">
+                                            <span>
+                                                <span class="mb-0 fw-bolder d-block text-uppercase">Click
+                                                    & Collect Shipping</span>
+                                                <small class="fw-bolder text-uppercase">Collect from our
+                                                    London store</small>
+                                            </span>
+                                            <span class="small fw-bolder text-uppercase">Free</span>
+                                        </span>
+                                    </label>
+                                </div>
+                                <div
+                                    class="form-check form-group form-check-custom form-radio-custom form-radio-highlight mb-3">
+                                    <input class="form-check-input" type="radio" name="checkoutShippingMethod"
+                                        id="checkoutShippingMethodTwo">
+                                    <label class="form-check-label" for="checkoutShippingMethodTwo">
+                                        <span class="d-flex justify-content-between align-items-start">
+                                            <span>
+                                                <span class="mb-0 fw-bolder d-block text-uppercase">UPS
+                                                    Next Day</span>
+                                                <small class="fw-bolder text-uppercase">For all orders
+                                                    placed before 1pm Monday to
+                                                    Thursday</small>
+                                            </span>
+                                            <span class="small fw-bolder text-uppercase">$19.99</span>
+                                        </span>
+                                    </label>
+                                </div>
+                                <div
+                                    class="form-check form-group form-check-custom form-radio-custom form-radio-highlight mb-3">
+                                    <input class="form-check-input" type="radio" name="checkoutShippingMethod"
+                                        id="checkoutShippingMethodThree">
+                                    <label class="form-check-label" for="checkoutShippingMethodThree">
+                                        <span class="d-flex justify-content-between align-items-start">
+                                            <span>
+                                                <span class="mb-0 fw-bolder d-block text-uppercase">DHL
+                                                    Priority Service</span>
+                                                <small class="fw-bolder text-uppercase">24 - 36 hour
+                                                    delivery</small>
+                                            </span>
+                                            <span class="small fw-bolder text-uppercase text-uppercase">$9.99</span>
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 col-sm-12">
+                            <div id="cart-items-4"></div>
+                            <div class="bg-light pt-lg-5 pe-lg-4 aside-checkout pb-5 pb-lg-0 my-5 my-lg-0">
+                                <div class="p-4 py-lg-0 pe-lg-0 ps-lg-5">
+                                    <div class="pb-4 border-bottom">
+                                        <div class="py-3 border-bottom border-white">
+                                            <div
+                                                class="d-flex justify-content-between align-items-center mb-2 flex-column flex-sm-row">
+                                                <p class="m-0 fw-bolder fs-6">Subtotal</p>
+                                                <p id="sub-total-3" class="cart-details fw-bold">$0</p>
+                                            </div>
+                                            <div
+                                                class="d-flex justify-content-between align-items-center flex-column flex-sm-row mt-3 m-sm-0">
+                                                <p class="m-0 fw-bolder fs-6">Shipping</p>
+                                                <span class="small">Will be set at checkout</span>
+                                            </div>
+                                        </div>
+                                        <div class="py-3 border-bottom border-white">
+                                            <div
+                                                class="d-flex justify-content-between align-items-center flex-column flex-sm-row">
+                                                <div>
+                                                    <p class="m-0 fs-5 fw-bold">Grand Total</p>
+                                                    <span class="small">$45.89 sales tax</span>
+                                                </div>
+                                                <p id="Grand-total-2" class="cart-details fw-bold">$0</p>
+                                            </div>
+                                        </div>
+                                        <div class="py-4">
+                                            <div class="input-group mb-0">
+                                                <input type="text" class="form-control fw-bold"
+                                                    placeholder="Enter coupon code">
+                                                <button class="btn btn-secondary btn-sm px-4 fw-bold z-1">Apply</button>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="btn btn-dark w-100 text-center fw-bold text-uppercase py-3"
+                                            role="button">Proceed
+                                            to checkout</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pills-disabled" role="tabpanel" aria-labelledby="pills-disabled-tab"
+                    tabindex="0">
+                    <div class="row">
+                        <div class="col-lg-7 col-sm-12">
+                            <div class="mt-5">
+                                <ul class="list-group mb-5 d-none d-lg-block rounded-0">
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        <div class="d-flex justify-content-start align-items-center">
+                                            <span class="text-muted small me-2 f-w-36 fw-bolder">Contact</span>
+                                            <span class="small">test@email.com</span>
+                                        </div>
+                                        <a href="./checkout.html" class="text-muted small" role="button">Change</a>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        <div class="d-flex justify-content-start align-items-center">
+                                            <span class="text-muted small me-2 f-w-36 fw-bolder">Deliver To</span>
+                                            <span class="small">123 Street, London, SM3 5TY, United Kingdom</span>
+                                        </div>
+                                        <a href="" class="text-muted small" role="button">Change</a>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        <div class="d-flex justify-content-start align-items-center">
+                                            <span class="text-muted small me-2 f-w-36 fw-bolder">Method</span>
+                                            <span class="small">UPS Priority Delivery</span>
+                                        </div>
+                                        <a href="" class="text-muted small" role="button">Change</a>
+                                    </li>
+                                </ul>
+                                <h3 class="fs-5 fw-bolder mb-4 border-bottom pb-4">Payment Information</h3>
+
+                                <div class="row">
+                                    <div class="col-12 d-flex justify-content-between">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadioDefault1">
+                                            <label class="form-check-label" for="flexRadioDefault1">
+                                                Credit Card (Stripe)
+                                            </label>
+                                        </div>
+                                        <i class="bi bi-minecart"></i>
+                                    </div>
+                                    <div class="col-12 d-flex justify-content-between">
+                                        <div class="form-check mt-4">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadioDefault2" checked>
+                                            <label class="form-check-label" for="flexRadioDefault2">
+                                                paypal
+                                            </label>
+                                        </div>
+                                        <i class="bi bi-paypal mt-4"></i>
+                                    </div>
+                                </div>
+                                <div class="card-details">
+                                    <div class="row pt-3">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label for="cc-name" class="form-label">Name on card</label>
+                                                <input type="text" class="form-control" id="cc-name" placeholder=""
+                                                    required="" fdprocessedid="lunm3m">
+                                                <small class="text-muted">Full name as displayed on card</small>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label for="cc-number" class="form-label">Credit card number</label>
+                                                <input type="text" class="form-control" id="cc-number" placeholder=""
+                                                    required="" fdprocessedid="805kcs">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="cc-expiration" class="form-label">Expiration</label>
+                                                <input type="text" class="form-control" id="cc-expiration"
+                                                    placeholder="" required="" fdprocessedid="x08q2f">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <div class="d-flex">
+                                                    <label for="cc-cvv"
+                                                        class="form-label d-flex w-100 justify-content-between align-items-center">Security
+                                                        Code</label>
+                                                    <button type="button"
+                                                        class="btn btn-link text-dark p-0 fw-bolder fs-xs text-nowrap"
+                                                        data-bs-toggle="tooltip" data-bs-placement="top"
+                                                        title="A CVV is a number on your credit card or debit card that's in addition to your credit card number and expiration date"
+                                                        fdprocessedid="dgvgat">
+                                                        What's this?
+                                                    </button>
+                                                </div>
+                                                <input type="text" class="form-control" id="cc-cvv" placeholder=""
+                                                    required="" fdprocessedid="86zby9">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="paypal-details bg-light p-4 d-none my-3 fw-bolder">
+                                    Please click on complete order. You will then be transferred to Paypal to enter your
+                                    payment details.
+                                </div>
+                                <div class="form-group form-check m-0">
+                                    <input type="checkbox" class="form-check-input" id="accept-terms" checked="">
+                                    <label class="form-check-label fw-bolder" for="accept-terms">I agree to
+                                        <a href="#" class="text-dark">terms &
+                                            conditions</a></label>
+                                </div>
+
+                                <div
+                                    class="pt-5 mt-5 pb-5 border-top d-flex flex-column flex-md-row justify-content-end align-items-center">
+                                    <a href="#" class="btn btn-dark w-75 w-md-auto text-uppercase fw-bold py-3"
+                                        role="button">Complete Order</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 col-sm-12">
+                            <div id="cart-items-5"></div>
+                            <div class="bg-light pt-lg-5 pe-lg-4 aside-checkout pb-5 pb-lg-0 my-5 my-lg-0">
+                                <div class="p-4 py-lg-0 pe-lg-0 ps-lg-5">
+                                    <div class="pb-4 border-bottom">
+                                        <div class="py-3 border-bottom border-white">
+                                            <div
+                                                class="d-flex justify-content-between align-items-center mb-2 flex-column flex-sm-row">
+                                                <p class="m-0 fw-bolder fs-6">Subtotal</p>
+                                                <p id="sub-total-4" class="cart-details fw-bold">$0</p>
+                                            </div>
+                                            <div
+                                                class="d-flex justify-content-between align-items-center flex-column flex-sm-row mt-3 m-sm-0">
+                                                <p class="m-0 fw-bolder fs-6">Shipping</p>
+                                                <span class="small">Will be set at checkout</span>
+                                            </div>
+                                        </div>
+                                        <div class="py-3 border-bottom border-white">
+                                            <div
+                                                class="d-flex justify-content-between align-items-center flex-column flex-sm-row">
+                                                <div>
+                                                    <p class="m-0 fs-5 fw-bold">Grand Total</p>
+                                                    <span class="small">$45.89 sales tax</span>
+                                                </div>
+                                                <p id="Grand-total-3" class="cart-details fw-bold">$0</p>
+                                            </div>
+                                        </div>
+                                        <div class="py-4">
+                                            <div class="input-group mb-0">
+                                                <input type="text" class="form-control fw-bold"
+                                                    placeholder="Enter coupon code">
+                                                <button class="btn btn-secondary btn-sm px-4 fw-bold z-1">Apply</button>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="btn btn-dark w-100 text-center fw-bold text-uppercase py-3"
+                                            role="button">Proceed
+                                            to checkout</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer"></footer>
+</body>
+
+</html>
+<script src="assest/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assest/js/header.js"></script>
+<script src="assest/js/footer.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+<script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
+    const products = [{
+        id: 0,
+        name: 'Full Zip Hoodie',
+        price: 1129,
+        image: 'assest/images/product-1.jpg'
+    }, {
+        id: 1,
+        name: 'Womens Sherpa Hoodie',
+        price: 599,
+        image: 'assest/images/product-2.jpg'
+    }, {
+        id: 2,
+        name: 'Mens Essentials Hoodie',
+        price: 779,
+        image: 'assest/images/product-3.jpg'
+    }, {
+        id: 3,
+        name: 'Elevated Lined Hoodie',
+        price: 1829,
+        image: 'assest/images/product-4.jpg'
+    }, {
+        id: 4,
+        name: 'Womens Slab Hoodie',
+        price: 29,
+        image: 'assest/images/product-15.jpg'
+    }, {
+        id: 5,
+        name: 'Blocked Striped Hoodie',
+        price: 1329,
+        image: 'assest/images/product-6.jpg'
+    }, {
+        id: 6,
+        name: 'Mens Outdoors T-Shirt',
+        price: 1699,
+        image: 'assest/images/product-12.jpg'
+    }, {
+        id: 7,
+        name: 'Pocket Tee Rusty Red',
+        price: 1499,
+        image: 'assest/images/product-8.jpg'
+    }, {
+        id: 8,
+        name: 'Mens T-Shirt Rusty',
+        price: 1199,
+        image: 'assest/images/product-13.jpg'
+    },];
+
+    let cart = JSON.parse(localStorage.getItem('cart'));
+
+    function updateDataItems() {
+        if (!cart) return;
+
+        const tabDataItems = cart.map(item => `
+        <div>
+            <div class="row mx-0 pb-4 mt-4 border-bottom">
+                <div class="col-5">
+                    <picture class="d-block">
+                        <img src="${item.image}" class= "img-height card-img-top" alt="${item.name}">
+                    </picture>
+                </div>
+                <div class="col-lg-7 col-sm-12">
+                    <div class="ms-5">
+                        <h6 class="justify-content-between d-flex align-items-start mb-2">
+                            ${item.name}
+                            <i class="bi bi-x-lg" onclick="DeleteQuantity('${item.name}')"></i>
+                        </h6>
+                        <small class="d-block text-muted fw-bolder">Quantity:${item.quantity}</small>
+                    </div>
+                    <p class="fw-bolder text-end m-0">${item.price}</p>
+                </div>
+            </div>
+        </div>
+    `).join('');
+
+        const subTotal = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
+        const grandTotal = subTotal + (45.89 * cart.length);
+
+        ['cart-items-1', 'cart-items-2', 'cart-items-3', 'cart-items-4', 'cart-items-5'].forEach(id => {
+            document.getElementById(id).innerHTML = tabDataItems;
+        });
+
+        ['sub-total', 'sub-total-1', 'sub-total-2', 'sub-total-3', 'sub-total-4'].forEach(id => {
+            document.getElementById(id).innerText = subTotal.toFixed(2);
+        });
+
+        ['Grand-total', 'Grand-total-1', 'Grand-total-2', 'Grand-total-3'].forEach(id => {
+            document.getElementById(id).innerText = grandTotal.toFixed(2);
+        });
+    }
+
+    function updateQuantityIn(name) {
+        let incQty = cart.find((item) => {
+            return item.name === name;
+        })
+
+        incQty.quantity += 1;
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateDataItems();
+    }
+
+    function updateQuantityDe(name) {
+        let incQty = cart.find((item) => {
+            return item.name === name;
+        })
+
+        if (incQty.quantity == 1) {
+            alert('Invalid')
+        } else {
+            incQty.quantity -= 1;
+            localStorage.setItem('cart', JSON.stringify(cart));
+            updateDataItems();
+            updateData();
+        }
+    }
+
+    function DeleteQuantity(name) {
+        cart = cart.filter(item => item.name !== name);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateDataItems();
+        viewData();
+    }
+
+    function clearCart(name) {
+        cart = [];
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateDataItems();
+        viewData();
+    }
+    updateDataItems();
+
+    function addToCart(id) {
+        if (cart === null) {
+            cart = [];
+        }
+        const newObj = {
+            id: products[id].id,
+            name: products[id].name,
+            image: products[id].image,
+            price: products[id].price,
+            quantity: 1,
+        }
+        console.log(newObj)
+        const existingItem = cart.findIndex(item => item.id === newObj.id);
+        if (existingItem != -1) {
+            cart[existingItem].quantity += 1;
+        } else {
+            cart.push(newObj);
+        }
+        localStorage.setItem('cart', JSON.stringify(cart));
+        viewData();
+        updateDataItems();
+    }
+</script>
+
+</html>

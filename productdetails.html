@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="assest/images/logo.png" rel="shortcut icon" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assest/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assest/css/style.css">
+    <link rel="stylesheet" href="assest/css/media.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <title>E-Commerce</title>
+</head>
+
+<body>
+    <header id="header"></header>
+    <div class="container top-margins">
+        <div class="row">
+            <div class="top-margins">
+                <div id="product-details"></div>
+            </div>
+        </div>
+    </div>
+    <section>
+        <div class="container top-margins">
+            <nav>
+                <div class="nav nav-underline justify-content-center d-flex" id="nav-tab" role="tablist">
+                    <button class="nav-link active text-dark fw-bold mb-5" id="nav-home-tab" data-bs-toggle="tab"
+                        data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home"
+                        aria-selected="true">The Details</button>
+                    <button class="nav-link text-dark fw-bold mb-5" id="nav-profile-tab" data-bs-toggle="tab"
+                        data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile"
+                        aria-selected="false">Reviews</button>
+                    <button class="nav-link text-dark fw-bold mb-5" id="nav-contact-tab" data-bs-toggle="tab"
+                        data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact"
+                        aria-selected="false">Delivery</button>
+                    <button class="nav-link text-dark fw-bold mb-5" id="nav-disabled-tab" data-bs-toggle="tab"
+                        data-bs-target="#nav-disabled" type="button" role="tab" aria-controls="nav-disabled"
+                        aria-selected="false">Returns</button>
+                </div>
+            </nav>
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"
+                    tabindex="0">
+                    <div class="col-12 col-lg-10 mx-auto">
+                        <div class="row">
+                            <div class="col-12 col-md-6 col-smx-11">
+                                <p>Soft, stretchy - the most flattering product of the season! What could be easier?
+                                    Beautifully soft and
+                                    light cotton-modal jersey, with the extra advantage of stretch, cut in an A-line -
+                                    the universally
+                                    flattering shape for every body. We promise you, once you've tried these lovely
+                                    products - you'll be
+                                    hooked..</p>
+                            </div>
+                            <div class="col-12 col-md-6 col-smx-11">
+                                <ul>
+                                    <li>Stretchy cotton-modal jersey stripe</li>
+                                    <li>Garment washed</li>
+                                    <li>Flat, covered elastic waistband</li>
+                                    <li>58% pima cotton/38% viscose </li>
+                                    <li>Modal/4% Lycra® elastane</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab"
+                    tabindex="0">
+                    <section class="reviews">
+                        <div class="col-lg-12 text-center pb-5">
+
+                            <h2 class="fs-1 fw-bold d-flex align-items-center justify-content-center">4.88 <small
+                                    class="text-muted fw-bolder ms-3 fw-bolder fs-6">(1288 reviews)</small></h2>
+                            <div class="d-flex justify-content-center">
+                                <div class="rating position-relative d-table">
+                                    <div class="position-absolute stars d-flex" style="width: 80%">
+                                        <i class="ri-star-fill text-dark ri-2x mr-1"></i>
+                                        <i class="ri-star-fill text-dark ri-2x mr-1"></i>
+                                        <i class="ri-star-fill text-dark ri-2x mr-1"></i>
+                                        <i class="ri-star-fill text-dark ri-2x mr-1"></i>
+                                        <i class="ri-star-fill text-dark ri-2x mr-1"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rounded py-3 px-4 mt-3 col-12 col-md-6 col-lg-5 mx-auto">
+                                <ul class="list-group list-group-flush">
+                                    <li
+                                        class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 bg-transparent">
+                                        <span class="fw-bolder">Fit</span>
+                                        <div class="rating position-relative d-table">
+                                            <div class="position-absolute stars d-flex" style="width: 25%">
+                                                <i class="bi bi-star-fill text-dark mr-1 "></i>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li
+                                        class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 bg-transparent">
+                                        <span class="fw-bolder">Value for money</span>
+                                        <div class="rating position-relative d-table">
+                                            <div class="position-absolute stars d-flex" style="width: 75%">
+                                                <i class="bi bi-star-fill text-dark mr-1 "></i>
+                                                <i class="bi bi-star-fill text-dark mr-1 "></i>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li
+                                        class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 bg-transparent">
+                                        <span class="fw-bolder">Build quality</span>
+                                        <div class="rating position-relative d-table">
+                                            <div class="position-absolute stars d-flex" style="width: 65%">
+                                                <i class="bi bi-star-fill text-dark mr-1 "></i>
+                                                <i class="bi bi-star-fill text-dark mr-1 "></i>
+                                                <i class="bi bi-star-fill text-dark mr-1 "></i>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li
+                                        class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 bg-transparent">
+                                        <span class="fw-bolder">Style</span>
+                                        <div class="rating position-relative d-table">
+                                            <div class="position-absolute stars d-flex" style="width: 90%">
+                                                <i class="bi bi-star-fill text-dark mr-1 "></i>
+                                                <i class="bi bi-star-fill text-dark mr-1 "></i>
+                                                <i class="bi bi-star-fill text-dark mr-1 "></i>
+                                                <i class="bi bi-star-fill text-dark mr-1 "></i>
+                                                <i class="bi bi-star-fill text-dark mr-1 "></i>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <article class="py-5 border-bottom border-top">
+                            <div class="row">
+                                <div class="col-12 col-md-4">
+                                    <small class="text-muted fw-bolder">08/12/2021</small>
+                                    <p class="fw-bolder">Ben Sandhu, Ireland</p>
+                                    <span
+                                        class="bg-success-subtle text-success fs-6 fw-bolder text-uppercase p-2">Verified
+                                        Customer</span>
+                                </div>
+                                <div class="col-12 col-md-8 mt-4 mt-md-0">
+                                    <div class="rating position-relative d-table">
+                                        <div class="position-absolute stars d-flex" style="width: 80%">
+                                            <i class="bi bi-star-fill text-dark mr-1 "></i>
+                                            <i class="bi bi-star-fill text-dark mr-1 "></i>
+                                            <i class="bi bi-star-fill text-dark mr-1 "></i>
+                                            <i class="bi bi-star-fill text-dark mr-1 "></i>
+                                            <i class="bi bi-star-fill text-dark mr-1 "></i>
+                                        </div>
+                                    </div>
+                                    <p class="fw-bolder mt-4">Happy with this considering the price</p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit sequi, architecto
+                                        placeat nam officia
+                                        sapiente ipsam at dolorum quisquam, ipsa earum qui laboriosam. Pariatur
+                                        recusandae nihil, architecto
+                                        reprehenderit perferendis obcaecati. Lorem ipsum dolor, sit amet consectetur
+                                        adipisicing elit.
+                                        Distinctio sint nesciunt velit quae, quisquam ullam veritatis itaque
+                                        repudiandae. Inventore quae
+                                        doloribus modi nihil illum accusamus voluptas suscipit neque perferendis totam!
+                                    </p>
+
+                                    <small class="fw-bolder bg-light d-table rounded py-1 px-2">Yes, I would recommend
+                                        the product</small>
+                                    <div class="d-block d-md-flex mt-3 justify-content-between align-items-center">
+                                        <a href="#"
+                                            class="btn btn-link text-muted p-0 text-decoration-none w-100 w-md-auto fw-bolder text-start"
+                                            title=""><small>Was this review helpful?
+                                                <i class="ri-thumb-up-line ms-4"></i> 112 <i
+                                                    class="ri-thumb-down-line ms-2"></i>
+                                                23</small></a>
+                                        <a href="#"
+                                            class="btn btn-link text-muted p-0 text-decoration-none w-100 w-md-auto fw-bolder text-start mt-3 mt-md-0"
+                                            title=""><small>Flag as
+                                                inappropriate <i class="ri-flag-2-line ms-2"></i></small></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="py-5 border-bottom ">
+                            <div class="row">
+                                <div class="col-12 col-md-4">
+                                    <small class="text-muted fw-bolder">08/12/2021</small>
+                                    <p class="fw-bolder">Patricia Smith, London</p>
+                                    <span
+                                        class="bg-success-subtle text-success fs-6 fw-bolder text-uppercase p-2">Verified
+                                        Customer</span>
+                                </div>
+                                <div class="col-12 col-md-8 mt-4 mt-md-0">
+                                    <div class="rating position-relative d-table">
+                                        <div class="position-absolute stars d-flex" style="width: 80%">
+                                            <i class="bi bi-star-fill text-dark mr-1 "></i>
+                                            <i class="bi bi-star-fill text-dark mr-1 "></i>
+                                            <i class="bi bi-star-fill text-dark mr-1 "></i>
+                                            <i class="bi bi-star-fill text-dark mr-1 "></i>
+                                            <i class="bi bi-star-fill text-dark mr-1 "></i>
+                                        </div>
+                                    </div>
+                                    <p class="fw-bolder mt-4">Very happy with my purchase so far...</p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit sequi, architecto
+                                        placeat nam officia
+                                        sapiente ipsam at dolorum quisquam, ipsa earum qui laboriosam. Pariatur
+                                        recusandae nihil, architecto
+                                        reprehenderit perferendis obcaecati. Lorem ipsum dolor, sit amet consectetur
+                                        adipisicing elit.
+                                        Distinctio sint nesciunt velit quae, quisquam ullam veritatis itaque
+                                        repudiandae. Inventore quae
+                                        doloribus modi nihil illum accusamus voluptas suscipit neque perferendis totam!
+                                    </p>
+
+                                    <small class="fw-bolder bg-light d-table rounded py-1 px-2">Yes, I would recommend
+                                        the product</small>
+                                    <div class="d-block d-md-flex mt-3 justify-content-between align-items-center">
+                                        <a href="#"
+                                            class="btn btn-link text-muted p-0 text-decoration-none w-100 w-md-auto fw-bolder text-start"
+                                            title=""><small>Was this review helpful?
+                                                <i class="ri-thumb-up-line ms-4"></i> 112 <i
+                                                    class="ri-thumb-down-line ms-2"></i>
+                                                23</small></a>
+                                        <a href="#"
+                                            class="btn btn-link text-muted p-0 text-decoration-none w-100 w-md-auto fw-bolder text-start mt-3 mt-md-0"
+                                            title=""><small>Flag as
+                                                inappropriate <i class="ri-flag-2-line ms-2"></i></small></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="py-5 border-bottom ">
+                            <div class="row">
+                                <div class="col-12 col-md-4">
+                                    <small class="text-muted fw-bolder">08/12/2021</small>
+                                    <p class="fw-bolder">Jack Jones, Scotland</p>
+                                    <span
+                                        class="bg-success-subtle text-success fs-6 fw-bolder text-uppercase p-2">Verified
+                                        Customer</span>
+                                </div>
+                                <div class="col-12 col-md-8 mt-4 mt-md-0">
+                                    <div class="rating position-relative d-table">
+                                        <div class="position-absolute stars d-flex" style="width: 80%">
+                                            <i class="bi bi-star-fill text-dark mr-1 "></i>
+                                            <i class="bi bi-star-fill text-dark mr-1 "></i>
+                                            <i class="bi bi-star-fill text-dark mr-1 "></i>
+                                            <i class="bi bi-star-fill text-dark mr-1 "></i>
+                                            <i class="bi bi-star-fill text-dark mr-1 "></i>
+                                        </div>
+                                    </div>
+                                    <p class="fw-bolder mt-4">I wish it was a little cheaper - otherwise love this!</p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit sequi, architecto
+                                        placeat nam officia
+                                        sapiente ipsam at dolorum quisquam, ipsa earum qui laboriosam. Pariatur
+                                        recusandae nihil, architecto
+                                        reprehenderit perferendis obcaecati. Lorem ipsum dolor, sit amet consectetur
+                                        adipisicing elit.
+                                        Distinctio sint nesciunt velit quae, quisquam ullam veritatis itaque
+                                        repudiandae. Inventore quae
+                                        doloribus modi nihil illum accusamus voluptas suscipit neque perferendis totam!
+                                    </p>
+
+                                    <small class="fw-bolder bg-light d-table rounded py-1 px-2">Yes, I would recommend
+                                        the product</small>
+                                    <div class="d-block d-md-flex mt-3 justify-content-between align-items-center">
+                                        <a href="#"
+                                            class="btn btn-link text-muted p-0 text-decoration-none w-100 w-md-auto fw-bolder text-start"
+                                            title=""><small>Was this review helpful?
+                                                <i class="ri-thumb-up-line ms-4"></i> 112 <i
+                                                    class="ri-thumb-down-line ms-2"></i>
+                                                23</small></a>
+                                        <a href="#"
+                                            class="btn btn-link text-muted p-0 text-decoration-none w-100 w-md-auto fw-bolder text-start mt-3 mt-md-0"
+                                            title=""><small>Flag as
+                                                inappropriate <i class="ri-flag-2-line ms-2"></i></small></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <a href="#" class="btn btn-dark d-table mx-auto mt-6 mb-3 hover-lift-sm hover-boxshadow"
+                            title="">Load More
+                            Reviews</a>
+                        <p class="text-muted text-center fw-bolder">Showing 3 of 1234</p>
+
+                    </section>
+                </div>
+                <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab"
+                    tabindex="0">
+                    <div class="col-12 col-md-10 col-lg-8 mx-auto">
+                        <p>We are now offering contact-free delivery so that you can still receive your parcels safely
+                            without requiring a
+                            signature. Please see below for the available delivery methods, costs and timescales.</p>
+                        <ul class="list-group list-group-flush mb-4">
+                            <li
+                                class="list-group-item d-flex justify-content-between align-items-center px-0 py-4 bg-transparent">
+                                <div>
+                                    <span class="fw-bolder d-block">Standard Delivery</span>
+                                    <span class="text-muted">Delivery within 5 days of placing your order.</span>
+                                </div>
+                                <p class="m-0 lh-1 fw-bolder">$12.99</p>
+                            </li>
+                            <li
+                                class="list-group-item d-flex justify-content-between align-items-center px-0 py-4 bg-transparent">
+                                <div>
+                                    <span class="fw-bolder d-block">Priority Delivery</span>
+                                    <span class="text-muted">Delivery within 2 days of placing your order.</span>
+                                </div>
+                                <p class="m-0 lh-1 fw-bolder">$17.99</p>
+                            </li>
+                            <li
+                                class="list-group-item d-flex justify-content-between align-items-center px-0 py-4 bg-transparent">
+                                <div>
+                                    <span class="fw-bolder d-block">Next Day Delivery</span>
+                                    <span class="text-muted">Delivery within 24 hours of placing your order.</span>
+                                </div>
+                                <p class="m-0 lh-1 fw-bolder">$33.99</p>
+                            </li>
+                        </ul>
+                        <div class="bg-light rounded p-3">
+                            <p class="fs-6">Form more information, please see our delivery FAQs <a href="#"
+                                    class="text-dark">here</a></p>
+                            <p class="m-0 fs-6">If you do not find the answer to your query, please contact our customer
+                                support team on
+                                <b>0800 123 456</b> or email us at <b>support@domain.com</b>. We aim to respond within
+                                48 hours to queries.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="nav-disabled" role="tabpanel" aria-labelledby="nav-disabled-tab"
+                    tabindex="0">
+                    <div class="col-12 col-md-10 col-lg-8 mx-auto">
+                        <p>We believe you will completely happy with your item, however if you aren't, there's no need
+                            to worry. We've
+                            listed below the ways you can return your item to us.</p>
+                        <ul class="list-group list-group-flush mb-4">
+                            <li class="list-group-item px-0 py-4 bg-transparent">
+                                <p class="fw-bolder">Return via post</p>
+                                <p class="fs-6">To return your items for free through the postal system, please complete
+                                    the returns form that
+                                    comes with your order. You'll find a label at the bottom of the form. Simply peel
+                                    the label and head to your
+                                    nearest post office.</p>
+                            </li>
+                            <li class="list-group-item px-0 py-4 bg-transparent">
+                                <p class="fw-bolder">Return in person</p>
+                                <p class="fs-6">To return your items for free in person, simply stop into any one of our
+                                    locations and speak
+                                    to a member of our in-store team.</p>
+                            </li>
+                        </ul>
+                        <div class="bg-light rounded p-3">
+                            <p class="fs-6">Form more information, please see our returns FAQs <a href="#"
+                                    class="text-dark">here</a></p>
+                            <p class="m-0 fs-6">If you do not find the answer to your query, please contact our customer
+                                support team on
+                                <b>0800 123 456</b> or email us at <b>support@domain.com</b>. We aim to respond within
+                                48 hours to queries.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer id="footer"></footer>
+</body>
+
+</html>
+<script src="assest/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assest/js/header.js"></script>
+<script src="assest/js/footer.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+<script>
+    const products = [{
+        id: 0,
+        name: 'Full Zip Hoodie',
+        price: 1129,
+        image: 'assest/images/product-1.jpg'
+    }, {
+        id: 1,
+        name: 'Womens Sherpa Hoodie',
+        price: 599,
+        image: 'assest/images/product-2.jpg'
+    }, {
+        id: 2,
+        name: 'Mens Essentials Hoodie',
+        price: 779,
+        image: 'assest/images/product-3.jpg'
+    }, {
+        id: 3,
+        name: 'Elevated Lined Hoodie',
+        price: 1829,
+        image: 'assest/images/product-4.jpg'
+    }, {
+        id: 4,
+        name: 'Womens Slab Hoodie',
+        price: 29,
+        image: 'assest/images/product-15.jpg'
+    }, {
+        id: 5,
+        name: 'Blocked Striped Hoodie',
+        price: 1329,
+        image: 'assest/images/product-6.jpg'
+    }, {
+        id: 6,
+        name: 'Mens Outdoors T-Shirt',
+        price: 1699,
+        image: 'assest/images/product-12.jpg'
+    }, {
+        id: 7,
+        name: 'Pocket Tee Rusty Red',
+        price: 1499,
+        image: 'assest/images/product-8.jpg'
+    }, {
+        id: 8,
+        name: 'Mens T-Shirt Rusty',
+        price: 1199,
+        image: 'assest/images/product-13.jpg'
+    },];
+
+
+    function displayProductDetails() {
+        const productDetailsContainer = document.getElementById('product-details');
+        const selectedProduct = JSON.parse(localStorage.getItem('selectedProduct'));
+
+        if (selectedProduct) {
+            const productDetails = `
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="card">
+                        <img src="${selectedProduct.image}" class="card-img-top img-fluid" alt="${selectedProduct.name}">
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 lh-lg">
+                    <div class="card-body">
+                        <h5 class="card-title">${selectedProduct.name}</h5>
+                        <p class="card-text">Price: $${selectedProduct.price}</p>
+                        <div class="product-option mb-3">
+                            <small class="text-uppercase d-block fw-bolder mb-2">
+                                Size (UK) : <span class="selected-option fw-bold"></span>
+                            </small>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Please Select Size</option>
+                                <option value="1">XS</option>
+                                <option value="2">M</option>
+                                <option value="3">L</option>
+                                <option value="3">XL</option>
+                            </select>
+                        </div>
+
+                        <button class="btn btn-dark w-100 mt-2 mb-3 py-3 fw-bold" onclick="addToCart(${selectedProduct.id})">Add To Cart</button>
+
+                        <div class="share mb-3">
+                            <p class="fw-bolder">Share</p>
+                            <div>
+                                <a href="#" class="me-2 text-dark"><i class="bi bi-instagram"></i></a>
+                                <a href="#" class="me-2 text-dark"><i class="bi bi-facebook"></i></a>
+                                <a href="#" class="me-2 text-dark"><i class="bi bi-twitter"></i></a>
+                                <a href="#" class="text-dark"><i class="bi bi-snapchat"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="bg-light rounded p-3">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item px-0 bg-transparent">
+                                    <i class="ri-truck-line"></i>
+                                    <span class="ms-3">Standard delivery free for orders over $99. Next day delivery $9.99</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        `;
+            productDetailsContainer.innerHTML = productDetails;
+        } else {
+            productDetailsContainer.innerHTML = '<p>No product selected.</p>';
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', displayProductDetails);
+
+
+    let cart = JSON.parse(localStorage.getItem('cart'));
+
+    function updateDataItems() {
+        if (cart) {
+            var tabDataItems = "";
+            for (var i = 0; i < cart.length; i++) {
+                tabDataItems += `<div>
+        <div class="row mx-0 pb-4 mt-4 border-bottom">
+            <div class="col-5">
+                <picture class="d-block">
+                <img src="${cart[i].image}" class= "img-height card-img-top" alt="${cart[i].name}">
+                </picture>
+            </div>
+            <div class="col-7">
+                <div class="ms-5">
+                    <h6 class="justify-content-between d-flex align-items-start mb-2">
+                        ${cart[i].name}
+                         <i class="bi bi-x-lg" onclick="DeleteQuantity('${cart[i].name}')"></i>
+                    </h6>
+                    <small class="d-block text-muted fw-bolder">Quantity:${cart[i].quantity}</small>
+                </div>
+                <p class="fw-bolder text-end m-0">${cart[i].price}</p>
+            </div>
+        </div>
+    </div>`;
+            }
+            document.getElementById('cart-items-1').innerHTML = tabDataItems;
+        }
+        const subTotal = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
+        document.getElementById('sub-total').innerText = `${subTotal.toFixed(2)}`;
+    }
+    function updateQuantityIn(name) {
+        let incQty = cart.find((item) => {
+            return item.name === name;
+        })
+
+        incQty.quantity += 1;
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateDataItems();
+    }
+
+    function updateQuantityDe(name) {
+        let incQty = cart.find((item) => {
+            return item.name === name;
+        })
+
+        if (incQty.quantity == 1) {
+            alert('Invalid')
+        } else {
+            incQty.quantity -= 1;
+            localStorage.setItem('cart', JSON.stringify(cart));
+            updateDataItems();
+            updateData();
+        }
+    }
+
+    function DeleteQuantity(name) {
+        cart = cart.filter(item => item.name !== name);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateDataItems();
+        viewData();
+    }
+
+    function clearCart(name) {
+        cart = [];
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateDataItems();
+        viewData();
+    }
+    updateDataItems();
+
+    function addToCart(id) {
+        if (cart === null) {
+            cart = [];
+        }
+        const newObj = {
+            id: products[id].id,
+            name: products[id].name,
+            image: products[id].image,
+            price: products[id].price,
+            quantity: 1,
+        }
+        console.log(newObj)
+        const existingItem = cart.findIndex(item => item.id === newObj.id);
+        if (existingItem != -1) {
+            cart[existingItem].quantity += 1;
+        } else {
+            cart.push(newObj);
+        }
+        localStorage.setItem('cart', JSON.stringify(cart));
+        viewData();
+        updateDataItems();
+    }
+
+</script>
+
+</html>
