@@ -82,7 +82,7 @@
 }
 
 .main-banner-img-1 {
-  background-image: url(/assest/images/banner-1.jpg);
+  background-image: url(../images/banner-1.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -90,7 +90,7 @@
 }
 
 .main-banner-img-2 {
-  background-image: url(/assest/images/banner-2.jpg);
+  background-image: url(../images/banner-2.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -98,7 +98,7 @@
 }
 
 .main-banner-img-3 {
-  background-image: url(/assest/images/banner-4.jpg);
+  background-image: url(../images/banner-4.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -718,7 +718,7 @@ button {
 }
 
 .index-banner-img {
-  background-image: url(/assest/images/index-banner.jpg);
+  background-image: url(../images/index-banner.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
