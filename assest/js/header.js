@@ -3,7 +3,7 @@ const headerData = `
             <div class="row">
             <nav class="navbar navbar-expand-lg bg-body-tertiary position-fixed z-2">
             <div class="container-fluid">
-                <svg class="f-w-7" xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 0 77.53 72.26">
+                <svg class="f-w-7 ms-lg-5 ms-md-4 ms-sm-4" xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 0 77.53 72.26">
                     <path
                         d="M10.43,54.2h0L0,36.13,10.43,18.06,20.86,0H41.72L10.43,54.2Zm67.1-7.83L73,54.2,68.49,62,45,48.47,31.29,72.26H20.86l-5.22-9L52.15,0H62.58l5.21,9L54.06,32.82,77.53,46.37Z"
                         fill="currentColor" fill-rule="evenodd"></path>

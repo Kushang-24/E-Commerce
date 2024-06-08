@@ -62,6 +62,9 @@
 }
 
 @media (max-width:768px) {
+    #product-list>div {
+        width: 50%;
+      }
     .banner-h {
         height: 470px;
     }
@@ -112,6 +115,9 @@
         top: 14px;
         left: 65%;
     }
+    #product-list>div {
+        width: 50%;
+      }
 }
 
 @media (max-width:425px) {
