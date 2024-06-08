@@ -43,7 +43,7 @@
 
     .card-button {
         top: 18px;
-        left: 93%;
+        left: 90%;
     }
 
     .bg-text-title {
@@ -52,8 +52,8 @@
     }
 
     .card-button-2 {
-        top: 27px;
-        left: 89%;
+        top: 30px;
+        left: 86%;
     }
 
     .nav {
@@ -93,24 +93,24 @@
 
     .card-button {
         top: 2px;
-        left: 82%;
+        left: 80%;
     }
 
     .card-button-2 {
         top: 15px;
-        left: 78%;
+        left: 74%;
     }
 }
 
 @media (max-width: 576px) {
     .card-button {
         top: 2px;
-        left: 75%;
+        left: 72%;
     }
 
     .card-button-2 {
         top: 14px;
-        left: 68%;
+        left: 65%;
     }
 }
 
@@ -146,12 +146,12 @@
 
     .card-button {
         top: 3px;
-        left: 69%;
+        left: 64%;
     }
 
     .card-button-2 {
         top: 16px;
-        left: 62%;
+        left: 54%;
     }
 
     #product-list>div {
@@ -241,12 +241,12 @@
 
     .card-button {
         top: 2px;
-        left: 63%;
+        left: 59%;
     }
 
     .card-button-2 {
         top: 14px;
-        left: 55%;
+        left: 48%;
     }
 
     .m-smx-auto {
@@ -290,12 +290,12 @@
 
     .card-button {
         top: 3px;
-        left: 58%;
+        left: 54%;
     }
 
     .card-button-2 {
         top: 15px;
-        left: 50%;
+        left: 44%;
     }
 
     .btn-psuedo {
