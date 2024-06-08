@@ -3,6 +3,7 @@ const headerData = `
             <div class="row">
             <nav class="navbar navbar-expand-lg bg-body-tertiary position-fixed z-2">
             <div class="container-fluid">
+                <img src="assest/images/logo.png" style="" alt="" widht="35px" height="35px">
                 <a class="navbar-brand text-uppercase fw-bold" href="index.html">E-Commerce</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                     aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
