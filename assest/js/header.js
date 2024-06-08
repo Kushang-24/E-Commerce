@@ -3,8 +3,11 @@ const headerData = `
             <div class="row">
             <nav class="navbar navbar-expand-lg bg-body-tertiary position-fixed z-2">
             <div class="container-fluid">
-                <img src="assest/images/logo.png" style="" alt="" widht="35px" height="35px">
-                <a class="navbar-brand text-uppercase fw-bold" href="index.html">E-Commerce</a>
+                <svg class="f-w-7" xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 0 77.53 72.26">
+                    <path
+                        d="M10.43,54.2h0L0,36.13,10.43,18.06,20.86,0H41.72L10.43,54.2Zm67.1-7.83L73,54.2,68.49,62,45,48.47,31.29,72.26H20.86l-5.22-9L52.15,0H62.58l5.21,9L54.06,32.82,77.53,46.37Z"
+                        fill="currentColor" fill-rule="evenodd"></path>
+                </svg>               
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                     aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
